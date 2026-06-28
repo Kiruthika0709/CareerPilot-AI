@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CareerPilot AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <nav class="navbar">
+
+<h2>🚀 CareerPilot AI</h2>
+
+<div>
+
+<a href="/">Home</a>
+
+<a href="https://github.com/YOUR_USERNAME/CareerPilot-AI" target="_blank">GitHub</a>
+
+</div>
+
+</nav>
+
+<div class="container">
+
+    <h1>🚀 CareerPilot AI</h1>
+
+    <h3>Smart Resume & Job Match Analyzer</h3>
+
+    <form action="/analyze" method="POST" enctype="multipart/form-data">
+
+        <h2>Upload your Resume and Job Description to discover your interview readiness, ATS match score, missing skills, and personalized recommendations.</h2>
+
+        <input
+        type="file"
+        name="resume"
+        accept=".pdf"
+        required>
+
+        <br><br>
+
+        <h2>Upload Job Description (PDF)</h2>
+
+        <input
+        type="file"
+        name="job"
+        accept=".pdf,.png,.jpg,.jpeg"
+        required>
+
+        <br><br>
+
+        <button type="submit">
+
+        Analyze Resume
+
+        </button>
+
+    </form>
+
+</div>
+<footer style="text-align:center;padding:30px;color:gray;">
+
+CareerPilot AI © 2026
+
+Built using Flask • Python • HTML • CSS
+
+</footer>
+
+</body>
+
+</html>

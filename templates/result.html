@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CareerPilot AI Results</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <nav class="navbar">
+
+<h2>🚀 CareerPilot AI</h2>
+
+<div>
+
+<a href="/">Home</a>
+
+<a href="https://github.com/YOUR_USERNAME/CareerPilot-AI" target="_blank">GitHub</a>
+
+</div>
+
+</nav>
+
+<div class="container">
+
+<h1>📊 Analysis Complete</h1>
+
+<div class="card">
+
+<h2>ATS Match Score</h2>
+<div class="card">
+    <h2>🎯 Interview Readiness</h2>
+
+    {% if score >= 85 %}
+        <h3 style="color:lightgreen;">Excellent</h3>
+    {% elif score >= 70 %}
+        <h3 style="color:orange;">Good</h3>
+    {% else %}
+        <h3 style="color:red;">Needs Improvement</h3>
+    {% endif %}
+</div>
+<div style="display:flex;justify-content:space-between;gap:20px;margin:30px 0;">
+
+<div class="card">
+<h2>{{ resume_words }}</h2>
+<p>Resume Words</p>
+</div>
+
+<div class="card">
+<h2>{{ resume_skills }}</h2>
+<p>Skills Found</p>
+</div>
+
+<div class="card">
+<h2>{{ missing_skills }}</h2>
+<p>Missing Skills</p>
+</div>
+
+</div>
+<div class="score">
+{{ score }}%
+</div>
+
+</div>
+<div style="background:#444;border-radius:20px;height:20px;width:100%;margin:20px 0;">
+    <div style="background:#22c55e;height:20px;border-radius:20px;width:{{score}}%;"></div>
+</div>
+<div class="card">
+    <h2>🏆 Overall Resume Rating</h2>
+    <h1>{{ rating }}</h1>
+</div>
+
+<div class="card">
+
+<h2>✅ Skills Found</h2>
+
+<ul>
+
+{% for skill in found %}
+
+<li>{{ skill }}</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>❌ Missing Skills</h2>
+
+<ul>
+
+{% for skill in missing %}
+
+<li>{{ skill }}</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>💡 Suggestions</h2>
+
+<ul>
+
+{% for suggestion in suggestions %}
+
+<li>{{ suggestion }}</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+<br>
+
+<center>
+
+<a href="/">
+
+<button>
+
+Analyze Another Resume
+
+</button>
+
+</a>
+
+</center>
+
+</div>
+<footer>
+
+<p>© 2026 CareerPilot AI | Built with Python, Flask & AI</p>
+
+</footer>
+</body>
+
+</html>

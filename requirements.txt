@@ -1,0 +1,9 @@
+Flask
+pdfplumber
+PyPDF2
+Flask==3.1.1
+pdfplumber
+PyPDF2
+pytesseract
+Pillow
+gunicorn
