@@ -26,7 +26,7 @@ An AI-powered Resume & Job Description Analyzer built with Flask.
 
 ## Live Demo
 
-Paste your Render URL here.
+https://careerpilot-ai-klc7.onrender.com/
 
 ## GitHub
 
